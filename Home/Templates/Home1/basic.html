@@ -1,0 +1,39 @@
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="container text-center">
+<h1>Welcome To my Portfolio, Please go ahead and explore! </h1>
+</div>
+<head>
+      <title>Shivam's Portfolio</title>
+</head>
+<div class="container text-center">
+<a href="https://www.facebook.com/shivam.coolminded">Facebook </a>
+<a href="https://twitter.com/shivamshivi">Twitter </a>
+<a href="https://www.linkedin.com/in/shivam-chadha-60069939/">LinkedIn </a>
+<a href="Home1/AboutMe.html">About Me </a>
+<br>
+<a href="C:/Users/shivamchadha/Desktop/DjangoPractice/portfolio-project/Home/Templates/Home1/resume.pdf">Resume</a>
+
+</div>
+
+{% for project in Projects%}
+<div class="text-center">
+<h2>{{project.title}}</h2>
+
+<div class="leftdiv">
+<p>{{project.description}}<p>
+</div>
+<div class="split left">
+<div class="centered">
+<img src="{{project.image.url}}" height=500 width=500 </img>
+</div>
+</div>
+<div class="split right">
+  <div class="centered">
+
+<form action ="Home1/improvements.html">
+<input type="submit" value="Any Improvements!" class = "btn btn-primary">
+</form>
+</div>
+</div>
+{% endfor %}

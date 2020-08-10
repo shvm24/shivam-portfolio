@@ -1,0 +1,11 @@
+<h1>This is my Blog details</h1>
+
+{{Blogs}}
+
+
+{% for blogs in Blog %}
+
+<p>{{blogs.blogTitle}}<p>
+{{blogs.blogDescription}}
+
+{% endfor %}
